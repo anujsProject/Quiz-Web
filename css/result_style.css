@@ -1,0 +1,155 @@
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f5f5f5;
+    font-family: 'lato', sans-serif;
+    font-size: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: 10%;
+}
+
+.header h2 {
+    font-size: 150%;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+.question_wrapper {
+    margin-bottom: 50px;
+    border: 1px solid #ccc;
+    /* border: 1px solid #f8d4d8; */
+    padding: 20px;
+    /* background-color: #e6f9ea; */
+    /* background-color: #fdf1f2;  */
+
+}
+
+
+
+.question_no {
+    margin-bottom: -10px;
+}
+
+.result_query_correct,
+.result_query_wrong {
+    font-size: 80%;
+    font-weight: 400;
+}
+
+/* .result_query_correct {
+    color: #28a745;
+}
+
+.result_query_wrong{
+    color: #dc3545;
+} */
+
+.options ul li {
+    background-color: #f1f1f1;
+    padding: 8px 15px;
+    cursor: text;
+}
+
+.custom-radio {
+    display: none;
+}
+
+.correct_li {
+    background-color: #d4edda !important;
+    position: relative;
+}
+
+.wrong_li {
+    background-color: #f8d7da !important;
+}
+
+.checkmark {
+    color: green;
+}
+
+.cross {
+    font-weight: 700;
+    font-size: 130%;
+    color: #dc3545;
+    vertical-align: middle;
+}
+
+.userAns {
+    position: relative;
+}
+
+.userAns::after,
+.correct_li::after {
+    font-size: 90%;
+    background-color: #eee;
+    padding: 2px 8px;
+    border-radius: 2px;
+    opacity: 0.9;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.userAns::after {
+    content: 'Your Answer';
+}
+
+.correct_li::after {
+    content: 'Correct Answer';
+}
+
+.marks {
+    margin-bottom: 50px;
+    font-size: 95%;
+    font-weight: 400;
+    color: #0984e3;
+    text-align: center;
+}
+
+.marks_inner {
+    display: inline-block;
+    text-align: left;
+}
+
+.result_body {
+    /* transition: all 1s;
+    height: 0%; */
+    margin-top: 30px;
+    overflow: hidden;
+    transition: all 2s;
+}
+
+
+/* ---- View Button ---- */
+
+.view_btn {
+    text-align: center;
+}
+
+.view_btn button {
+    background-color: #0984e3;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 80%;
+    letter-spacing: 1px;
+    font-weight: 300;
+}

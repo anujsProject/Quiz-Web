@@ -1,0 +1,89 @@
+
+/*  ------- For Screen ------- */
+
+
+@media screen and (max-width: 1300px) {
+
+    .hero-text-box {
+        width: 100%;
+        padding: 0 2%;
+        font-size: 90%;
+    }
+
+    .prev {
+        left: -10px;
+    }
+    
+    .next {
+        right: -10px;
+    }
+    
+    .prev:hover {
+        left: -13px;
+    }
+    .next:hover {
+        right: -13px;
+    }
+
+    .row {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    body {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 848px) {
+    .col {
+        width: 80% !important;
+        margin-left: 10% !important;
+        float: none;
+        margin-bottom: 8px;
+    }
+
+    .profile {
+        /* text-align: center; */
+        display: none;
+    }
+
+    .row {
+        margin-bottom: 15px !important;
+        margin-left: 2% !important;
+        margin-right: 2% !important;
+    }
+
+    .contact-form {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    .sticky {
+        display: none !important;
+    }
+    
+    .nav-lines {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    
+    .hero-text-box > h1 {
+        font-size: 200%;
+    }
+    
+    .contact-form {
+        width: 100%;
+        margin: 0px;
+    }
+}

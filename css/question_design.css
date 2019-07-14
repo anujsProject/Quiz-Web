@@ -1,0 +1,239 @@
+
+/* ---------------------------------- */
+/* ---- Reusable Styles  ----- */
+/* ---------------------------------- */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'lato', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-rendering: optimizeLegibility;
+    font-weight: 300;
+    line-height: 145%;
+    background-color: #f5f5f5;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 100px auto;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0px auto;
+}
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 0.4%;
+}
+
+.span-1-of-2 {
+    width: 49.2%;
+}
+
+.span-1-of-3 {
+    width: 32.26%;
+}
+
+.span-2-of-3 {
+    width: 66.13%;
+}
+
+.row:after {
+    content:"";
+    display: block;
+    clear:both;
+}
+.active:link,
+.active:visited {
+    background-color: #0984e3;
+    color: #fff;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.quick-note {
+    font-size: 80%;
+    line-height: 135%;
+    margin-right: 10px;
+}
+
+.quick-note span {
+    font-weight: 400;
+}
+/* ---------------------------------- */
+/* ---- All Questions No. ----- */
+/* ---------------------------------- */
+.questions-list {
+    /* margin: 20px 30px; */
+    padding: 10px;
+}
+
+.questions-list table {
+    /* border: 1px solid #0984e3; */
+    border-collapse: collapse;
+}
+
+.questions-list table tr td {
+    border: 1.2px solid #bbb;
+    text-align: center;
+    padding: 0px;
+}
+
+.questions-list table tr td a:hover,
+.questions-list table tr td a:active {
+    background-color: #0984e3;
+    color: #fff;
+}
+
+td a:link,
+td a:visited {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #0984e3;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+/* ----------------------------------- */
+
+/* ---------------------------------- */
+/* ---- Question Discription ----- */
+/* ---------------------------------- */
+
+.question-container {
+    /* border: 1px solid red; */
+    padding: 10px;
+}
+
+.question-title {
+    /* border: 1px solid red; */
+    font-weight: 300;
+    font-size: 95%;
+}
+
+.question_no {
+    font-size: 85%;
+    font-weight: 400;
+}
+
+.options {
+    padding: 0px;
+}
+.options ul {
+    list-style-type: none;
+    padding: 0px;
+    font-weight: 400;
+    font-size: 80%;
+
+}
+
+.options ul li {
+    margin-bottom: 5px;
+}
+
+.custom-radio {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #0984e3;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+
+.custom-radio::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%; 
+    width: 7px;
+    height: 7px;
+    background-color: #0984e3;
+    display: none;
+    transform: translate(-50%, -50%);
+}
+
+[type = "radio"] {
+    display: none;
+}
+
+[type = "radio"]:checked ~ .custom-radio::after {
+    display: inline-block;
+}
+
+.buttons {
+    /* border: 2px solid red; */
+    margin-top: 50px;
+}
+
+.buttons button {
+    text-decoration: none;
+    border: 1px solid #0984e3;
+    font-size: 90%;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: #0984e3;
+    color: #fff;
+    cursor: pointer;
+}
+
+.buttons .prev {
+    float: left;
+    display: none;
+}
+
+.buttons .next {
+    float: right;
+}
+
+h2 {
+    font-weight: 300;
+    text-align: center;
+    margin: 0px;
+    font-size: 150%;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.buttons button:hover {
+    background-color: #087bd3
+}
+
+.show_prev {
+    display: block !important;
+}
+
+.answered {
+    background-color: #28a745;
+    color: #fff !important;
+}
+
+/*------ Media Queries ------*/
+@media screen and (max-width: 848px) {
+    .col {
+        width: 100%;
+    }
+}

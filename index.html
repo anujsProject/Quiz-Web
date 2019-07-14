@@ -1,0 +1,393 @@
+<!doctype html>
+<html>
+    <head>
+        <link href = "fonts/css/all.css" rel = "stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,700" rel = "stylesheet"/>
+        <link href = "css/style.css" rel = "stylesheet" type = "text/css"/>
+        <link href = "css/mediaQuery.css" rel = "stylesheet" type = "text/css"/>
+        <title>Evaluate Yourself</title>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header>
+            <nav>
+                <div class =  "row">
+                    <img src = "img/logo.png" alt = "evaluate-logo" class = "logo"/>
+                    <ul>
+                        <li><a href = "#" class = "nav_list">Home</a></li>
+                        <li><a href = "#" class = "nav_list">Brief Info</a></li>
+                        <li><a href = "#" class = "nav_list">How we evaluate</a></li>
+                        <li><a href = "#" class = "nav_list">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <div class = "nav-lines">
+                    <span class = "nav-line"></span>
+                    <span class = "nav-line"></span>
+                    <span class = "nav-line"></span>
+                </div>
+
+            </nav>
+            
+            <div class = "hero-text-box">
+                <h1>
+                    Preparing for <span class = "iit">IIT</span> ? <br/>
+                    Check where you have reached!
+                </h1>
+
+                <a href = "#" class = "btn btn-full">Take the test</a>
+                <!-- <a href = "#" class = "btn btn-ghost">Know more</a> -->
+
+            </div>
+        </header>
+        <!-- ************************  -->
+
+        <!-- Modal  -->
+
+        <!----- Login Modal ------>
+        <div id = "myModal" class = "modal">
+            <div class = "modal-content">
+                <!-- Modal Borders design-->
+                <!-- <span class = "modal-border modal-border-top"></span>
+                <span class = "modal-border modal-border-bottom"></span>
+                <span class = "modal-border modal-border-left"></span>
+                <span class = "modal-border modal-border-right"></span> -->
+                <!-- *** -->
+                <div class = "modal-header">
+                    <div class = "close-container">
+                        <span class = "close">&times;</span>
+                    </div>
+                    <h2>Let's Start</h2>
+                </div>
+                
+                <div class = "modal-body">
+                    <div class = "row">
+                        <p class = "modal-para">I am very to happy see you that you are trusting us and giving us your 
+                            precious time. I am eagar to know how you perform, so without 
+                            wasting more time lets get started!<br/>
+                            There are few instruction you need to keep in mind. Go through it thorougly:
+                        </p>
+                        <ul class = "instructions-list">
+                            <li>There will be 10 Question in the test Paper.</li>
+                            <li>Each Question will carry 4 marks. Marks will be deducted for wrong answers as instructed before.</li>
+                            <li>You will get 20 minutes for solving all the questions. After 20 minutes you can continue but there will be warning.</li>
+                            <li>You may skip a question for answering later.</li>
+                        </ul>
+                        <p class = "modal-para-line">Now, Just enter your name for future references.</p>
+                    </div>
+                    <form method = "get" action = "questions.html" class = "modal-form">
+                        <div class = "row">
+                            <!-- <div class = "col span-1-of-3">
+                            </div> -->
+                            <label for = "modal_user_name">What is your name?</label>
+                            <input id = "modal_user_name" type = "text"/>
+                        </div>
+                        <div class = "row">
+                            <input type = "submit" value = "Start Test"/>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!------ Nav Modal ------>
+
+        <div class = "sideNav">
+                <div class = "sideNav-header">
+                    <span class = "close_nav">&times;</span>
+                </div>
+                <div class = "sideNav-body">
+                    <ul>
+                        <li><a href = "#" class = "sideNav_list">Home</a></li>
+                        <li><a href = "#" class = "sideNav_list">Brief Info</a></li>
+                        <li><a href = "#" class = "sideNav_list">How we evaluate</a></li>
+                        <li><a href = "#" class = "sideNav_list">Contact us</a></li>
+                    </ul>
+            </div>
+        </div>
+
+        <!-- ********************** -->
+
+        <!-- Information Section -->
+        <section class = "section-info">
+            <div class = "row">
+                <h2>Who are we?</h2>
+            </div>
+
+            <div class = "row">
+                <div class = "profile">
+                    <div class = "dev-pic col span-img"><img src = "img/user_2.jpg"/></div>
+                    <div class = "basic-info col span-info" >
+                        
+                        <table>
+                            <tr>
+                                <td>Name </td>
+                                <td>Anuj Sharma </td>
+                            </tr>
+                            <tr>
+                                <td>Profession </td>
+                                <td>Unknown till now </td>
+                            </tr>
+                            <tr>
+                                <td>Hobby </td>
+                                <td>Programming </td>
+                            </tr>
+                            <tr>
+                                <td>Known for </td>
+                                <td>Investing Time</td>
+                            </tr>
+                            <tr>
+                                <td>Projects </td>
+                                <td>Evaluate Yourself</td>
+                            </tr>
+                            <tr>
+                                <td>Contact </td>
+                                <td>contact.abs21@gmail.com</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class = "row">
+                <p class = "info-para">
+                    In todays Era, cracking JEE entrance is consider one of the unaimed
+                    ordeal in the world. Even the universities like Havard and Oxford admits every five
+                    applicant but IIT one student is selected out of 20-25. More specifically talking, 
+                    only 10,0000 get selected every year out of more than 12 lakhs applicants. So now 
+                    you can how tough it is to crack JEE. <br/>
+                    <span>Evaluate Yourself</span> is a open source project developed by <span>Mr. Anuj Sharma who is a passionate Programmar.</span> <br/>
+                    The main intention behind this project is to help JEE(Joint Entrance Exam) to Evaluate themselves and find their 
+                    Progress. <br/>
+                    IIT-JEE aspirants often wonder things about the IITs, their dream institutions. We are helping thousands of 
+                    Every Year to achieve this.
+                    Please leave a feedBack if in any kind this project helps you in acheiving 
+                    your dream. This is the only motivation we have that keeps this project running!
+                </p>
+            </div>
+
+        </section>
+        <!-- ******************* -->
+
+        <!-- Testimonial Section -->
+        <section class = "section-testimonials">
+            <div class = "row">
+                <h2>What our users say</h2>
+            </div>
+
+            <div class = "row slide_container">
+
+                <div class = "slides slide_1">
+                    <blockquote>
+                        <cite>
+                            <img src = "img/user_1.jpg" alt = "Biresh Sharma" class = "user-pic"/>
+                            <div class = "user-info">Biresh Sharma <br/> <span>Overwhelmed!</span></div>
+                        </cite>  <br/>
+                        
+                        <span class = "quote">&ldquo; </span>I have use this website a lot during my JEE preparartion. I was able to get
+                        to IIT bombay and this website holds the utmost credit for my achievement.
+                        I request you to use this website atleast one time so that you will know the importance 
+                        of it. I bet you that it can play very vital role in your success.<span class = "quote"> &rdquo;</span>
+                    </blockquote>
+                </div>
+
+                <div class = "slides slide_2">
+                    <blockquote>
+                        <cite>
+                            <img src = "img/user_2.jpg" alt = "Anuj Sharma" class = "user-pic"/>
+                            <div class = "user-info">Anuj Sharma <br/> <span>Astonished!</span></div>
+                        </cite>  <br/>
+                        
+                        <span class = "quote">&ldquo; </span>I have been part of Aakash Institute Janakpuri (yeah the oldest) for 4 
+                        long years i.e did 9th, 10th, 11th and 12th. So i think i am capable of giving this amswer
+                        if you are in the foundation course (8th , 9th or 10th) then this is the best place for you. 
+                        It made me fall in love jwith Maths and science. I wanted to spend all my time there. Faculty is very good and teachers are very caring. 
+                        Class strength was 45–50 students when i was studying there i.e 2014–16<span class = "quote"> &rdquo;</span>
+                    </blockquote>
+                </div>
+
+                <div class = "slides slide_3">
+                    <blockquote>
+                        <cite>
+                            <img src = "img/user_3.jpg" alt = "Ayush Sharma" class = "user-pic"/>
+                            <div class = "user-info">Ayush Sharma <br/> <span>Happy!</span></div>
+                        </cite>  <br/>
+                        
+                        <span class = "quote">&ldquo; </span>It's been almost two years that I've been running behind the manager 
+                        requesting for the refund for the security deposit of 5000 rupees. Not only did they delay this by two 
+                        whole years but they have deducted an amount of 1400 giving nonsensical reasons. This place has the 
+                        worst customer service and most of the employees there are a bunch of ignorant imbeciles who only 
+                        value the customers money.<span class = "quote"> &rdquo;</span>
+                    </blockquote>
+                </div>
+
+                <a class = "prev">&#10094;</i></a>
+                <a class = "next">&#10095;</i></a>
+            </div>
+
+        </section>
+        <!-- ********************* -->
+
+        <section class = "section-evaluate">
+            <div class = "row">
+                <h2>How we evaluate</h2>
+            </div>
+
+            <div class = "row">
+                <p class = "info-para">
+                    Here is the two most inmportant thing for a JEE aspirants
+                    to care proper care of if he wants to clear the exam.
+                    We have this feature which helps our users to prepare for
+                    the exam.
+                </p>
+            </div>
+            
+            <div class = "row evaluate-row">
+                <div class = "col span-1-of-2">
+                    <div class = "evaluate-icon">
+                            <ion-icon name="remove-circle-outline"></ion-icon>
+                    </div>
+                    <div class = "title">
+                        <h3>Marking Scheme</h3>
+                    </div>
+                    <p class = "evaluate-para">
+                        For each incorrect answer, 1/4th mark of the total mark allotted will be deducted.
+                        Each question carries 4 marks. But don't worry our test papers are designed so well 
+                        that you will understand exactly the problem and how to tackle it.  SO start to solve the test
+                        papers before wasting much time now. I will more than happy if you will
+                        clear the exam.
+                    </p>
+                </div>
+
+                    
+                <div class = "col span-1-of-2">
+                    <div class = "evaluate-icon">
+                        <ion-icon name="hourglass"></ion-icon>
+                    </div>
+                    <div class = "title">
+                        <h3>Time Management</h3>
+                    </div>
+                    <p class = "evaluate-para">
+                            It usually happens during the final exam that students fail to complete the test paper. 
+                            Why? The real reason being their inability to manage time properly. 
+                            Despite of being thoroughly prepared for the exam, candidates tend to feel tensed and nervous on the exam day.
+                            We will help you in tackling this issue.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class = "row">
+                <p class = "info-para">
+                </p>
+            </div>
+
+        </section>
+        <!-- ************************ -->
+
+        <!-- Section Contact -->
+        <section class = "section-contact">
+            <div class = "row">
+                <h2>Get in touch with us</h2>
+            </div>
+            <div class = "row">
+                <form class = "contact-form">
+                    <div class = "row">
+                        <div class = "col span-1-of-3">
+                            <label for = "name">Name</label>
+                        </div>
+                        <div class = "col span-2-of-3">
+                            <input type = "text" id = "name" placeholder = "Your Name"/>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col span-1-of-3">
+                            <label for = "email">Email</label>
+                        </div>
+                        <div class = "col span-2-of-3">
+                            <input type = "text" id = "email" placeholder = "Email"/>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col span-1-of-3">
+                            <label>How did you find us?</label>
+                        </div>
+                        <div class = "col span-2-of-3">
+                            <select>
+                                <option>Friend</option>
+                                <option>Internet</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col span-1-of-3">
+                            <label>Newsletter</label>
+                        </div>
+                        <div class = "col span-2-of-3">
+                            <label for = "news">
+                                <input type = "checkbox" id = "news" placeholder = "Your Name" checked/>
+                                <span class = "checkbox-design"></span>
+                                <span>Yes, please</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col span-1-of-3">
+                            <label for = "message">Drop us a line</label>
+                        </div>
+                        <div class = "col span-2-of-3">
+                            <textarea id = "message" col = "6" row = "4" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class = "row submit-container">
+                        <input type = "submit" value = "Submit" class = "col" />
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class = "row">
+                <div class = "col span-1-of-2">
+                    <ul class = "footer-nav">
+                        <li><a href = "#">About us</a></li>
+                        <li><a href = "#">Blog</a></li>
+                        <li><a href = "#">Press</a></li>
+                        <li><a href = "#">Android App</a></li>
+                        <li><a href = "#">iOS App</a></li>
+                    </ul>
+                </div>
+
+                <div class = "col span-1-of-2">
+                    <ul class = "social-links">
+                        <li><a href = "#"><i class = "fab fa-facebook"></i></a></li>
+                        <li><a href = "#"><i class = "fab fa-twitter"></i></a></li>
+                        <li><a href = "#"><i class ="fab fa-google-plus"></i></a></li>
+                        <li><a href = "#"><i class = "fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+    
+            </div>
+            <div class = "row">
+                <div class = "footer-text">
+                    <p>Developed and managed by <span class = "creater">Anuj Sharma!</span></p>
+                    <p>Copyright &copy; 2019 by Evaluate Yourself. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src = "js/main.js" type = "text/javascript"></script>
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    </body>
+</html>
+
+
+
+<!-- Georgr orwell 1984 -->

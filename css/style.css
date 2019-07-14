@@ -1,0 +1,928 @@
+
+/*  -------------------------------------------------- */
+/*  ------ Reusable Code ------ */
+/*  -------------------------------------------------- */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'lato', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-rendering: optimizeLegibility;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 0px;
+    clear: both;
+}
+
+.logo {
+    width: 100px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0px auto;
+}
+
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 0.4%;
+}
+
+.span-1-of-2 {
+    width: 49.2%;
+}
+
+.span-1-of-3 {
+    width: 32.26%;
+}
+
+.span-2-of-3 {
+    width: 66.13%;
+}
+
+.row:after {
+    content:"";
+    display: block;
+    clear:both;
+}
+
+/*  -------------------------------------------------- */
+/*  ------ Header ------ */
+/*  -------------------------------------------------- */
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/iit_lecture.jpeg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+/* ---- Navigation ---- */
+
+nav ul {
+    list-style: none;
+    float: right;
+    margin-top: 40px;
+}
+
+header ul li {
+    display: inline-block;
+    margin-right: 40px;
+    padding: 0px;
+}
+
+
+header ul li a:link,
+header ul li a:visited  {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 80%;    
+    padding: 4px 0px;
+    text-transform: uppercase;
+    transition: border-bottom 0.15s ease-in-out;
+    border-bottom: 2px solid transparent;
+    letter-spacing: 1px;
+}
+
+header ul li a:hover,
+header ul li a:active
+{
+    border-bottom-color:#0984e3;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0px;
+    background-color: #fff;
+    box-shadow: 0 8px 6px -9px #999;
+    animation-name: slide;
+    animation-duration: 0.5s;
+    overflow:hidden;
+}
+
+@keyframes slide {
+    from{ height: 0; }
+    to { height: 59.163px; }
+}
+
+.sticky_text:link,
+.sticky_text:visited {
+    color: #000;
+}
+
+.sticky_ul {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.sticky_logo {
+    width: 70px;
+    margin: 10px 10px 5px 10px;
+}
+
+.nav-lines {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+}
+
+.nav-line {
+    display: block;
+    border-top: 2px solid #fff;
+    width: 25px;
+    margin-bottom: 6px;
+}
+
+/*-------- Side Navigation --------*/
+
+
+.sideNav {
+    display: block;
+    position: fixed;
+    width: 0px;
+    height: 100%;
+    top: 0px;
+    z-index: 3;
+    right: 0px;
+    background-color: #fff;
+    transition: all 0.5s;
+    box-shadow: 2px 2px 8px inset #aaa;
+}
+
+.sideNav-body ul {
+    list-style: none;
+    padding: 0px;
+    margin: 50px 0px;
+}
+
+.sideNav-body ul li a:link, 
+.sideNav-body ul li a:visited {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    margin: 0px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #aaa;
+    color: #0984e3;
+    font-size: 95%;
+    font-weight: 400;
+    transition: all 0.2s;
+}
+
+.sideNav-body ul li a:hover, 
+.sideNav-body ul li a:active {
+    background-color: #0984e3;
+    color: #fff;
+}
+
+.sideNav-header {
+    height: 32px;
+    background-color: #eee;
+}
+
+.close_nav {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0px 8px;
+    font-size: 150%;
+    cursor: pointer;
+    background-color: red;
+    color: #fff;
+    transition: background 0.2s;
+}
+
+.close_nav:hover {
+    background-color: #dc3545;
+}
+
+/* ----- Hero Text ---- */
+
+.hero-text-box {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   width: 1140px;
+}
+
+.iit {
+    color: #0984e3;
+    font-weight: 700;
+}
+
+/* ----- Heading ----- */
+.hero-text-box > h1{
+    font-size: 240%;
+    color: #fff;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 130%;
+    word-spacing: 4px;
+}
+
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 170%;
+    margin: 0px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    width: 100px;
+    display: block;
+    height: 2px;
+    background-color: #0984e3;
+    margin: 0px auto;
+    margin-top: 30px;
+}
+
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 120%;
+    margin-top: 0px;
+}
+
+/* ----- Button ----- */
+.btn:link, 
+.btn:visited {
+    text-decoration: none;
+    font-weight: 300;
+    border: 2px solid #0984e3;
+    border-bottom: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    vertical-align: middle;
+    /* background-color: rgba(9, 132, 227, 0.1); */
+}
+
+.btn-full:link,
+.btn-full:visited {
+    color: #8acafa;
+    transition: all 0.3s; 
+    position: relative;
+    transition: all 0.5s;
+}
+
+.btn-full::after {
+    content: '';
+    position: absolute;
+    border-radius: 50px;
+    left: -1px;
+    top: -1px;
+    width: 102%;
+    height: 100%;
+    background-color: #0984e3;
+    z-index: -2;
+    transform: scaleX(0);
+    transition: all 0.5s;
+}
+
+.btn-full:hover::after {
+    transform: scaleX(1);
+}
+
+.btn-full:hover,
+.btn-full:active {
+    color: #fff;
+}
+
+
+/* .btn-ghost:link,
+.btn-ghost:visited {
+    color: #fff;
+    position: relative;
+    transition: background-color 0.5s, color 0.5s;
+} */
+/* 
+.btn-full:hover,
+.btn-full:active {
+    background-color: #0871c2;
+} */
+
+/* .btn-ghost:hover,
+.btn-ghost:active {
+    color: #fff !important;
+}
+ */
+
+a:hover {
+    color: #fff;
+}
+
+/* ---- Button Ghost Animation */
+/* .btn-ghost:before,
+.btn-ghost:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 105%;
+    background-color: #0984e3;
+    z-index: -2;
+    display: inline-block;
+    top: -1px;
+    transition: 0.5s all;
+}
+
+.btn-ghost:after {
+    right: 49%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.btn-ghost:before {
+    left: 50%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.btn-ghost:hover:after,
+.btn-ghost:hover:before {
+    width: 52%;
+} */
+
+
+/*  -------------------------------------------------- */
+/*  ------ Section info ------ */
+/*  -------------------------------------------------- */
+
+
+
+.section-info {
+    background-color: #f5f5f5;
+}
+
+.info-para, .modal-para {
+    width: 80%;
+    margin-left: 10%;
+    font-weight: 300;
+    line-height: 145%;
+    font-size: 85%;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-top: 40px;
+}
+
+.dev-pic img {
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.profile {
+    width: 80%;
+    margin-top: 60px;
+    margin-left: 10%;
+}
+
+
+.basic-info table {
+    font-weight: 400;
+    font-size: 80%;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.basic-info table tr td { 
+    border-bottom: 1px solid #8acafa;
+    height: 45px;
+    padding: 15px;
+}
+
+.basic-info table tr:nth-child(even) {
+    background-color: #ebf8ff;
+}
+
+
+.span-img {
+    width: 33.4%;
+    vertical-align: middle;
+}
+
+.span-info {
+    width: 50%;
+}
+
+/*  -------------------------------------------------- */
+/*  ------ Section testimonials ------ */
+/*  -------------------------------------------------- */
+
+.section-testimonials {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/iit_bombay_background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    color: #fff;
+}
+
+blockquote {
+    display: inline-block;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 145%;
+    letter-spacing: 1px;
+}
+
+blockquote cite {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+/* ---- User Profile Design ---- */
+
+.user-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+    vertical-align: middle;
+}
+
+.user-info {
+    font-size: 120%;
+    margin-top: 5px;
+}
+
+.user-info span {
+    font-size: 70%;
+    display: inline-block;
+    font-weight: 100;
+}
+
+.quote {
+    font-size: 150%;
+}
+
+.than-symbol {
+    font-size: 200%;
+}
+
+/* ---- Slides ---- */
+
+.slide_container {
+    position: relative;
+}
+
+.slides {
+    display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+ @keyframes fade { 
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.prev, .next {
+    color: #fff;
+    text-decoration: none;
+    font-size: 200%;
+    position: absolute;
+    top: 60%;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.prev {
+    left: -50px;
+}
+
+.next {
+    right: -50px;
+}
+
+.prev:hover {
+    left: -53px;
+}
+.next:hover {
+    right: -55px;
+}
+
+ /*  -------------------------------------------------- */
+/*  ------ Section Evaluate ------ */
+/*  -------------------------------------------------- */
+
+.section-evaluate {
+    background-color: #f9f9f9;
+}
+
+.evaluate-row {
+    margin-top: 40px;
+}
+
+.evaluate-row > div {
+    padding: 15px;
+    margin-left: 5%;
+    width: 45%;
+    border-radius: 4px;
+}
+
+.evaluate-icon {
+    font-size: 300%;
+    color: #0984e3;
+}
+
+.evaluate-para {
+    font-size: 80%;
+    font-weight: 300;
+    line-height: 145%;
+}
+
+/*  -------------------------------------------------- */
+/*  ------ Section Contact Form ------ */
+/*  -------------------------------------------------- */
+
+.contact-form {
+    font-weight: 300;
+    font-size: 90%;
+    letter-spacing: 0px;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 30px;
+}
+
+input[type = "text"],
+input[type = "email"],
+ select,
+ textarea {
+    width: 100%;
+    padding: 2%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    letter-spacing: 0px;
+    font-weight: 300;
+    font-size: 85%;
+    transition: all 0.2s;
+}
+
+textarea {
+    height: 100px;
+}
+
+.contact-form .row {
+    margin-bottom: 10px;
+    background: linear-gradient(0, 0, 0, 0.7), url(../img/form_back.jpg);
+}
+
+input[type = "text"]:focus,
+input[type = "email"]:focus,
+ select:focus,
+ textarea:focus {
+     border-color:#0984e3;
+     outline: 0;
+ }
+
+.checkbox-design {
+    display: inline-block;
+    border: 1.2px solid #0984e3;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+}
+
+.checkbox-design::before {
+    content: '';
+    width: 4px;
+    height: 10px;
+    top: 1px;
+    border-bottom : 3px solid #0984e3;
+    border-right : 3px solid #0984e3;
+    transform: rotate(45deg);
+    display: none;
+    position: absolute;
+    left: 5px;
+    vertical-align: middle;
+}
+
+input[type = "checkbox"]:checked ~ .checkbox-design::before {
+    display: inline-block;
+}
+
+input[type = "checkbox"] {
+    display: none;
+}
+
+.submit-container {
+    text-align: left;
+}
+
+input[type = "submit"] {
+    background-color: #0984e3;
+    color: #fff;
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 300;
+    font-size: 80%;
+    letter-spacing: 1px;
+    outline: 0;
+    cursor: pointer;
+    transform: background 0.2s;
+}
+
+input[type = "submit"]:hover {
+    background-color: #0871c2;
+}
+/*  -------------------------------------------------- */
+/*  ------ Footer ------ */
+/*  -------------------------------------------------- */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+    margin: 0px;
+}
+
+.footer-nav li,
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+    padding: 0px;
+}
+
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited  {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 70%;    
+    transition: color 0.2s ease-in-out;
+    letter-spacing: 1px;
+    opacity: 0.6;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-links li a:hover,
+.social-links li a:active
+{
+    color: #fff;
+    opacity: 1;
+}
+
+.social-links {
+    float: right;
+    margin: 0px;
+}
+
+.footer-text p {
+    font-weight: 300;
+    font-size: 70%;
+    opacity: 0.6;
+    margin: 5px;
+    text-align: center;
+}
+
+.footer-text p:first-child {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.creater {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/*  -------------------------------------------------- */
+/*  ------ Modal------ */
+/*  -------------------------------------------------- */
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* max-height: 100%;
+    overflow: auto; */
+}
+
+.modal-header h2 {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    position: relative;
+    margin: 6% auto;
+    padding: 40px 20px;
+    width: 80%;
+    border: 1px solid #0984e3;
+    animation-name: animateModal;
+    animation-duration: 0.5s;
+    position: relative;
+    border-radius: 6px;
+}
+
+@keyframes animateModal {
+    from { top: -100%; opacity: 0;}
+    to { top: 0px; opacity: 1; }
+}
+
+.close-container {
+    font-size: 28px;
+    background-color: #0984e3;
+    color: #fff;
+    padding: 35px 5px;
+    cursor: pointer;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    transition: background 0.2s;
+    position: absolute;
+    top: -1px;
+    right: 20px;
+    width: 28px;
+}
+
+.close-container:hover {
+    background-color: #ff0000;
+}
+
+.close {
+    position: absolute;
+    bottom: 2px;
+}
+
+.modal-body {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 40px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.modal-para,
+.modal-para-line {
+    width: 100%;
+    margin: 0px;
+    font-size: 80%;
+    letter-spacing: 1px;
+}
+
+.instructions-list {
+    font-size:70%;
+    line-height: 140%;
+    padding-left: 35px;
+    margin-top: 10px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    
+}
+
+.instructions-list li {
+    margin-bottom: 6px;
+}
+
+.modal-header h2 {
+    font-size: 150%;
+}
+
+.modal-form {
+    position: relative;
+    margin-top: 30px;
+    font-size: 95%;
+}
+
+.modal-form input[type = "text"] {
+    padding: 7px 5px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    transition: all 0.2s;
+}
+
+.modal-form input[type = "submit"] {
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+.modal-form label{
+    font-size: 80%;
+    opacity: 0.5;
+    font-weight: 400;
+    position: absolute;
+    top: 5px;
+    padding: 0px 5px;
+    cursor: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.focused {
+    transform: translateY(-140%) !important;
+    font-size: 65% !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+    color: #0984e3;
+}
+
+.focused_modal_input {
+    border-bottom: 2px solid #0984e3 !important;
+}
+/* Border design Modal -- Not Looking good-- */
+/* .modal-border {
+    display: inline-block;
+    background-color: #0984e3;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+}
+
+.modal-border-top {
+    top: 15px;
+    left: 0px;
+}
+.modal-border-bottom {
+    bottom: 15px;
+    left: 0px;
+}
+.modal-border-left {
+    height: 100%;
+    width: 4px;
+    left: 15px;
+    top: 0px;
+}
+.modal-border-right {
+    height: 100%;
+    width: 4px;
+    right: 15px;
+    top: 0px;
+} */
+/* ------------------------- */
+
+
+/* ------ Experimenting With UI ------ */
+
+/* .cool-header p {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 220%;
+    margin: 0px;
+    position: relative;
+    margin-top: 40px;
+}
+
+.cool-header {
+    margin-top: 100px;
+}
+
+.cool-header p span {
+    color: #0984e3;
+    font-weight: 700;
+    display: inline-block;
+    transform: rotate(-10deg);
+} */
