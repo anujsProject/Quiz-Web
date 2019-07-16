@@ -2,4 +2,6 @@
  Quiz Program developed in HTML, CSS and JS
 
 Disclaimer:
-You can use this Project to practice your Skills
+Improvements are most welcomed, feel free to improve it.
+You can use this Project to practice your Skills.
+
