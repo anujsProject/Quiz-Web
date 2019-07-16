@@ -2,7 +2,8 @@
 /* ---- DOM Strings ---- */
 
 const DOMStrings = {
-    question_container: document.querySelector('.question-container')
+    question_container: document.querySelector('.question-container'),
+    container: document.querySelector('.container')
 };
 /* ---------------------- */
 
@@ -55,9 +56,15 @@ const q = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16
 const changeToQuestion = (q_No, cur_q_no) => {
     
     if(cur_q_no == q_No) return;
-    if(q_No == 1) {
-        document.querySelector('.prev').classList.remove('show_prev');
+    if(q_No >= 2) {
+        document.querySelector('.prev').style.display = "block !important";
+        console.log(q_No);
     }
+    else if(q_No == 1) {
+        document.querySelector('.prev').style.display = "none !important";
+        console.log(q_No);
+    }
+    
     // There will two here, store the answer and update the UI
 
     // Fetching the checked radio Button
@@ -126,7 +133,7 @@ const changeToQuestion = (q_No, cur_q_no) => {
             </div>
 
             <div class = "buttons clearfix">
-                <button class = "show_prev prev">Previous</button>
+                <button class = "prev">Previous</button>
                 <button class = "next">Next</button>
             </div>
         
@@ -164,7 +171,7 @@ const handleQuestion = (e) => {
 
 };
 
-document.querySelector('.container').addEventListener('click', (e) => {
+DOMStrings.container.addEventListener('click', (e) => {
     handleQuestion(e);
 });
 

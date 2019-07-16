@@ -92,9 +92,10 @@ h2 {
 .submit {
     text-decoration: none;
     border: 1px solid #0984e3;
+    background-color: #0984e3;
     padding: 5px 15px;
     border-radius: 6px;
-    color: #0984e3;
+    color: #fff;
     letter-spacing: 1px;
     font-size: 80%;
     transition: all 0.2s;
@@ -106,8 +107,7 @@ h2 {
 
 .edit:hover,
 .submit:hover {
-    background-color: #0984e3;
-    color: #fff;
+    background-color: #0871c2;
 }
 
 .submit {
@@ -116,4 +116,21 @@ h2 {
 
 .action_btns {
     margin: 20px auto;
+}
+
+@media screen and  (max-width: 525px) {
+    body {
+        font-size: 90%;
+    }
+
+    .edit, .submit {
+        padding: 2px 10px;
+        font-size: 100%;
+    }
+    .edit {
+        margin-left: 10px;
+    }
+    .submit {
+        margin-right: 10px;
+    }
 }

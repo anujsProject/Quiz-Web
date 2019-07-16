@@ -3,10 +3,12 @@ localStorage.clear();
 /* ---- Dom Strings ---- */
 
 const DOMStrings = {
+    body: document.querySelector('body'),
     logo_nav: document.querySelector(`nav img`),
     nav_list_items: Array.from(document.querySelectorAll('.nav_list')), // Though forEach converts this nodelist automatically, i wanted to be little clearer
     nav: document.querySelector(`nav`),
     nav_ul: document.querySelector('nav ul'),
+    slide_container: document.querySelector('.section-testimonials'),
     slides: Array.from(document.querySelectorAll('.slides')),
     prev_btn: document.querySelector('.prev'),
     next_btn: document.querySelector('.next'),
@@ -75,9 +77,16 @@ const changeSlide = (n) => {
 DOMStrings.prev_btn.addEventListener('click', () => changeSlide(-1));
 DOMStrings.next_btn.addEventListener('click', () => changeSlide(1));
 
-setInterval(() => {
+let slide_timer = setInterval(() => {
     changeSlide(1);
-}, 3000);
+}, 5000);
+
+DOMStrings.slide_container.addEventListener('mouseover', () => clearInterval(slide_timer));
+DOMStrings.slide_container.addEventListener('mouseout', () => {
+    slide_timer = setInterval(() => {
+    changeSlide(1);
+}, 5000);
+});
 
 /* ------- Modal ------  */
 
