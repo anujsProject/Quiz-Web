@@ -102,6 +102,17 @@ const handleUI = () => {
 
 
     let result_st;
+    let maxTime = 25;
+    let timeTaken = JSON.parse(localStorage.getItem('quiz_time'));
+    let min = maxTime - parseInt(timeTaken[0]);
+    let sec = 60 - parseInt(timeTaken[1]);
+    if(sec > 0) min--;
+    if(sec == 60) sec = 0;
+    
+    if(sec < 10) {
+        sec = '0' + sec;
+    }
+
     if(rightAnsCount < 15) {
         result_st =  `You got ${(rightAnsCount * 4) - ((wrongAnsCount * 4) * 1/4)} out of ${questions.length * 4}.<br/> You need to Improve!`
     }
@@ -117,11 +128,11 @@ const handleUI = () => {
                     ${result_st} <br/><br/>
                     No. of Questions Answered: ${rightAnsCount + wrongAnsCount} <br/>
                     Right Answers: ${rightAnsCount} <br/>
-                    Wrong Answers: ${wrongAnsCount}
+                    Wrong Answers: ${wrongAnsCount} <br/>
+                    Time Taken: ${`${min}:${sec} Minutes`}
                 </div>
             </div>
         `;
-    console.log(wrongAnsCount);
     DOMStrings.header.insertAdjacentHTML('afterend', result_sum);
 
 };
@@ -137,11 +148,11 @@ result_body.style.display = 'none';
 body_toggle_btn.addEventListener('click', () => {
     if(result_body.style.display == 'none') {
         result_body.style.display = 'block';
-        body_toggle_btn.textContent = "Click to View the Full Summary";
+        body_toggle_btn.textContent = "Click to Hide the Full Summary";
     }
     else {
         result_body.style.display = 'none';
-        body_toggle_btn.textContent = "Click to Hide the Full Summary";
+        body_toggle_btn.textContent = "Click to View the Full Summary";
     }
 });
 

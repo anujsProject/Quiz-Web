@@ -209,13 +209,27 @@ td a:visited {
     float: right;
 }
 
-h2 {
+
+.header_question h2 {
     font-weight: 300;
-    text-align: center;
+    text-align: right;
     margin: 0px;
     font-size: 150%;
     margin-bottom: 40px;
+    width: 60%;
     text-transform: uppercase;
+    float: left;
+}
+
+.timer {
+    width: 40%;
+    text-align: right;
+    margin: 0px;
+    float: left;
+    font-weight: 400;
+    font-size: 80%;
+    margin-top: -30px;
+    line-height: 140%;
 }
 
 .buttons button:hover {

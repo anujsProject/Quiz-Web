@@ -56,14 +56,18 @@ const q = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16
 const changeToQuestion = (q_No, cur_q_no) => {
     
     if(cur_q_no == q_No) return;
-    if(q_No >= 2) {
+
+    /* -----   Having previous button bug  ----*/
+    /*
+     if(q_No >= 2) {
         document.querySelector('.prev').style.display = "block !important";
         console.log(q_No);
     }
     else if(q_No == 1) {
         document.querySelector('.prev').style.display = "none !important";
-        console.log(q_No);
+        console.log(q_No + " Oh shit");
     }
+    */
     
     // There will two here, store the answer and update the UI
 
@@ -133,11 +137,12 @@ const changeToQuestion = (q_No, cur_q_no) => {
             </div>
 
             <div class = "buttons clearfix">
-                <button class = "prev">Previous</button>
+                <button class = "show_prev prev">Previous</button>
                 <button class = "next">Next</button>
             </div>
         
         `;
+    
         // DOMStrings.prev_btn.classList.add("show_prev");
         DOMStrings.question_container.insertAdjacentHTML('afterbegin', markUp);
 
@@ -156,13 +161,13 @@ const handleQuestion = (e) => {
     // Check if nextor previous btn is clicked
     else if(e.target.matches('.next')) {
         if(q_no === 20) {
-            window.location = 'submit_sum.html';
+            saveTimer();
         }
         changeToQuestion(q_no + 1, q_no);
     }
 
     else if(e.target.matches('.prev')) {
-        changeToQuestion(q_no - 1, q_no);
+        changeToQuestion(q_no - 1, JSON.strq_no);
     }
 
     // else if(q_no > 1) {
@@ -178,3 +183,34 @@ DOMStrings.container.addEventListener('click', (e) => {
 
 // DOMStrings.prev_btn.classList.add("show_prev");
 
+/* ---- Timer of the Quiz ---- */
+let timer = document.querySelector('.timer .time_remaining');
+
+const saveTimer = () => {
+    localStorage.setItem('quiz_time', JSON.stringify(str));
+    window.location.href = "submit_sum.html";
+};
+
+let str;
+
+window.setInterval(() => {
+    str = timer.textContent.split(':');
+    let min = parseInt(str[0]);
+    let sec = parseInt(str[1]);
+    if(sec > 0 || min > 0) {
+        if(sec == 0) {
+            sec =  60;
+            min--;
+        }
+    
+        sec--;
+        if(sec < 10) {
+            sec = '0' + sec;
+        }
+        timer.textContent = min + ':' + sec;
+    }
+    else {
+        saveTimer();  // Saving the Time and Redirecting
+    }
+    
+}, 1000);

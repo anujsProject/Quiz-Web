@@ -14,7 +14,6 @@ const renderUI = () => {
         else 
             answered[i] = 'UnAnswered';
     });
-    console.log(answered);
     const markUp =
     `
         <table>
