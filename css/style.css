@@ -25,6 +25,10 @@ body {
     clear: both;
 }
 
+.u-center {
+    text-align: center;
+} 
+
 .logo {
     width: 100px;
     margin-top: 30px;
@@ -392,46 +396,107 @@ a:hover {
     margin-top: 40px;
 }
 
-.dev-pic img {
-    width: 220px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 2px;
-}
-
+/*---  Profile ---*/
 .profile {
-    width: 80%;
-    margin-top: 60px;
-    margin-left: 10%;
+    display: inline-block;
+    margin: 50px auto;
+    text-align: left;
 }
 
 
-.basic-info table {
+.profile__name {
+    margin-bottom: 0;
     font-weight: 400;
-    font-size: 80%;
-    border-collapse: collapse;
-    width: 100%;
+    font-size: 28px;
+    margin-top: 20px;
 }
 
-.basic-info table tr td { 
-    border-bottom: 1px solid #8acafa;
-    height: 45px;
-    padding: 15px;
+.profile__info__prof {
+    margin-top: 5px;
+    font-size: 17px;
+    color: #999;
+    font-weight: 700;
 }
 
-.basic-info table tr:nth-child(even) {
-    background-color: #ebf8ff;
+.profile__header {
+    background-color: #0984e3;
+    color: #f5f5f5;
+    padding-left: 20px;
 }
 
-
-.span-img {
-    width: 33.4%;
+.profile__header__icon {
+    font-size: 30px;
     vertical-align: middle;
 }
 
-.span-info {
-    width: 50%;
+.profile__header__creator {
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+    margin: 15px 5px;
+    
 }
+
+.profile__pic {
+    width: 250px;
+    float: left;
+    text-align: center;
+}
+
+.profile__pic__img {
+    width: 85%;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.profile__content {
+    border: 1px solid #ccc;
+    border-top: 0;
+    background-color: #f5f5f5;
+    color: #666;
+}
+
+.profile__info {
+    float: left;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 0rem;
+}
+
+.developer__info__table {
+    border-collapse: collapse;
+    background-color: #fff;
+    font-weight: 400;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+}
+
+.developer__info__table td,
+.developer__info__table th {
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.developer__info__table th {
+    background-color: #f6f6f6;
+    text-align: left;
+}
+
+
+.clearfix::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+}
+
 
 /*  -------------------------------------------------- */
 /*  ------ Section testimonials ------ */

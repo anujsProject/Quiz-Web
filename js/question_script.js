@@ -57,7 +57,7 @@ const changeToQuestion = (q_No, cur_q_no) => {
     
     if(cur_q_no == q_No) return;
 
-    /* -----   Having previous button bug  ----*/
+    /* -----   Having previous button bug  ----- */
     /*
      if(q_No >= 2) {
         document.querySelector('.prev').style.display = "block !important";
@@ -158,7 +158,7 @@ const handleQuestion = (e) => {
         changeToQuestion(e.target.textContent, q_no);
     }
 
-    // Check if nextor previous btn is clicked
+    // Check if next or previous btn is clicked
     else if(e.target.matches('.next')) {
         if(q_no === 20) {
             saveTimer();

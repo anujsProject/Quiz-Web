@@ -118,37 +118,57 @@
             </div>
 
             <div class = "row">
+                <div class = "u-center">
                 <div class = "profile">
-                    <div class = "dev-pic col span-img"><img src = "img/user_2.jpg"/></div>
-                    <div class = "basic-info col span-info" >
-                        
-                        <table>
-                            <tr>
-                                <td>Name </td>
-                                <td>Anuj Sharma </td>
-                            </tr>
-                            <tr>
-                                <td>Profession </td>
-                                <td>Unknown till now </td>
-                            </tr>
-                            <tr>
-                                <td>Hobby </td>
-                                <td>Programming </td>
-                            </tr>
-                            <tr>
-                                <td>Known for </td>
-                                <td>Investing Time</td>
-                            </tr>
-                            <tr>
-                                <td>Projects </td>
-                                <td>Evaluate Yourself</td>
-                            </tr>
-                            <tr>
-                                <td>Contact </td>
-                                <td>contact.abs21@gmail.com</td>
-                            </tr>
-                        </table>
-
+            
+                    <div class = "profile__header">
+                        <ion-icon name = "ios-cube" class = "profile__header__icon"></ion-icon>
+                        <p class = "profile__header__creator">Creator</p>
+                    </div>
+                    
+                    <div class = "profile__content clearfix">
+                        <div class = "profile__pic">
+                            <img src = "img/profile_pic_1.jpg" class = "profile__pic__img" alt = "Anuj Sharma">
+                        </div>
+                        <div class = "profile__info">
+                            <div class = "profile__name">Anuj Sharma</div>
+                            <p class = "profile__info__prof">Web Developer</p>
+                            
+        <!--
+                            <div class = "developer__info">
+                                <h3>A little Description</h3>
+        -->
+                                <table class = "developer__info__table">
+                                    
+                                    <tr>
+                                        <th colspan="2">A little Description</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Profession</td>
+                                        <td>Unknown Till Now</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Hobby</td>
+                                        <td>Programming</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Known For</td>
+                                        <td>Nothing(Atleast for Now)</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Project</td>
+                                        <td>Evaluate Yourself</td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td>Contact</td> <td>contact.abs21@gmail.com</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -383,7 +403,8 @@
         </footer>
 
         <script src = "js/main.js" type = "text/javascript"></script>
-        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
 
     </body>
 </html>
